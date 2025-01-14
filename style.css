@@ -1,0 +1,92 @@
+/* .carousel-inner{
+    width: 1000px ;
+    height: 500px ;    
+} */
+#myCarousel{
+    width: 80% ;
+    height: 500px ;
+    margin: 0 auto ;
+}
+.carousal-item{
+    width: 100% ;
+    height: 500px ;
+}
+@media (max-width: 768px) {
+    #myCarousel{
+        width: 100% ;
+        height: 300px ;
+    }
+    .carousal-item{
+        width: 100% ;
+        height: 300px ;
+    }
+}
+@media (max-width: 576px) {
+    #myCarousel{
+        width: 100% ;
+        height: 200px ;
+    }
+    .carousal-item{
+        width: 100% ;
+        height: 200px ;
+    }
+}
+ .main-container{
+    width: 100% ; 
+     margin: 0 auto ; 
+     display: flex; 
+     justify-content: space-between; 
+     padding-left: 20px; 
+ } 
+#navbarNav{
+    display: flex ;
+    justify-content: space-evenly ;
+    width: 100% ;
+    margin: 0 auto ;
+}
+.navbar-nav{
+    display: flex ;
+    justify-content: space-evenly ;
+    width: 100% ;
+    margin: 0 auto ;
+}
+.container-fluid{
+    display: flex;
+    justify-content: space-evenly;
+}
+/* .nav-links{
+    color: white ;
+    display: flex;
+} */
+ header nav{
+    display: flex ;
+    justify-content: space-between ;
+    width: 100% ;
+    margin: 0 auto ;
+    background-color: rgb(49, 49, 47);
+ }
+ ul{
+    display: flex ;
+    justify-content: space-between ;
+    width: 100% ;
+    margin: 0 auto ;
+    column-gap: 20px ;
+    list-style: none ;
+    padding-top: 20px;
+    padding-right: 20px;
+ }
+.logo{
+    /* background-color: blue; */
+}
+.par{
+    background-color: greenyellow;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: red
+}
+.card-text{
+    font-size: 16px ;
+    font-family: sans-serif ;
+    background-color: red;
+    color: blue;
+}

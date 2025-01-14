@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "fIEzeKi-DKphi9VwB",
+        });
+    })();
+</script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .contact-form {
+            background: #1a7daa;
+            padding-left: 20px;
+            padding-right: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .contact-form h2 {
+            margin-bottom: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ee3333;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            width: 100%;
+            /* padding: 10px 10px; */
+            background: #5cb85c;
+            border: none;
+            border-radius: 5px;
+            color: #c9ff06;
+            font-size: 16px;
+        }
+        .contact-form button:hover {
+            background: #cbec0d;
+            color: #1a7daa;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+        <h2>Contact Me</h2>
+        <!-- <form action="submit_form.php" method="post"> -->
+            <label for="">Name:
+                <input type="text" name="name" placeholder="Your Name" required id="name">
+            </label>
+           <label for="">
+             Email:<input type="email" name="email" placeholder="Your Email" required id="email">
+           </label>
+            <label for="">
+                Your Feedback<textarea name="message" placeholder="Your Message" rows="5" required id="message"></textarea>
+            </label>
+           <label for="">
+                Product:<input type="text" name="Product" placeholder="Product" required id="Product">
+            </label>
+            <button type="submit" onclick="submit()">Send Message</button>
+        <!-- </form> -->
+    </div>
+    <script>
+        function submit(){
+            let fullName = document.getElementById("name").value;
+            let userEmail = document.getElementById("email").value;
+            let product = document.getElementById("Product").value;
+            let message = document.getElementById("message").value;
+    
+            let params = {
+                full_name: fullName,
+                product: product,
+                email: userEmail,
+                message: message
+            }
+            emailjs.send("service_wjxyjnv","template_vctvog8", params).then((res) => {
+                alert("Your order has been placed");
+                console.log(res)
+            })
+            .catch((error) => {console.log(error)})  
+        }
+    </script>
+</body>
+</html>
