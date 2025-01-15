@@ -63,7 +63,7 @@
 <body>
     <div class="contact-form">
         <h2>Contact Me</h2>
-        <!-- <form action="submit_form.php" method="post"> -->
+       
             <label for="">Name:
                 <input type="text" name="name" placeholder="Your Name" required id="name">
             </label>
@@ -74,29 +74,18 @@
                 Your Feedback<textarea name="message" placeholder="Your Message" rows="5" required id="message"></textarea>
             </label>
            <label for="">
-                Product:<input type="text" name="Product" placeholder="Product" required id="Product">
+                Product:<input type="text" name="Product" placeholder="Product No" required id="Product">
             </label>
             <button type="submit" onclick="submit()">Send Message</button>
-        <!-- </form> -->
+        
     </div>
     <script>
         function submit(){
-            let fullName = document.getElementById("name").value;
-            let userEmail = document.getElementById("email").value;
-            let product = document.getElementById("Product").value;
-            let message = document.getElementById("message").value;
-    
-            let params = {
-                full_name: fullName,
-                product: product,
-                email: userEmail,
-                message: message
-            }
-            emailjs.send("service_wjxyjnv","template_vctvog8", params).then((res) => {
+
+            
                 alert("Your order has been placed");
                 console.log(res)
-            })
-            .catch((error) => {console.log(error)})  
+
         }
     </script>
 </body>
