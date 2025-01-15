@@ -120,4 +120,14 @@
     background-color: white; 
     color: #007bff; 
   }
-  
+@media (max-width: 768px) {
+    .logo, .conn, .nav-links, .burger, .line1, .line2, .line3, .carousel-inner, .carousel-item, .container, .row, .col-md-2, .col-xl-2, .col-sm-4, .col-xxl-2, .card, .card-img-top, .card-body, .card-title, .card-text, .btn, .bg-light, .text-center, .text-lg-start, #myCarousel, #navbarNav {
+        /* Add your styles for screens smaller than 768px here */
+    }
+}
+
+@media (max-width: 576px) {
+    .logo, .conn, .nav-links, .burger, .line1, .line2, .line3, .carousel-inner, .carousel-item, .container, .row, .col-md-2, .col-xl-2, .col-sm-4, .col-xxl-2, .card, .card-img-top, .card-body, .card-title, .card-text, .btn, .bg-light, .text-center, .text-lg-start, #myCarousel, #navbarNav {
+        /* Add your styles for screens smaller than 576px here */
+    }
+}
