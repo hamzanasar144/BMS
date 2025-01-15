@@ -120,14 +120,85 @@
     background-color: white; 
     color: #007bff; 
   }
-@media (max-width: 768px) {
-    .logo, .conn, .nav-links, .burger, .line1, .line2, .line3, .carousel-inner, .carousel-item, .container, .row, .col-md-2, .col-xl-2, .col-sm-4, .col-xxl-2, .card, .card-img-top, .card-body, .card-title, .card-text, .btn, .bg-light, .text-center, .text-lg-start, #myCarousel, #navbarNav {
-        /* Add your styles for screens smaller than 768px here */
+  /* @media screen and (max-width: 768px) {
+      .container{
+        w
+      }
     }
-}
-
-@media (max-width: 576px) {
-    .logo, .conn, .nav-links, .burger, .line1, .line2, .line3, .carousel-inner, .carousel-item, .container, .row, .col-md-2, .col-xl-2, .col-sm-4, .col-xxl-2, .card, .card-img-top, .card-body, .card-title, .card-text, .btn, .bg-light, .text-center, .text-lg-start, #myCarousel, #navbarNav {
-        /* Add your styles for screens smaller than 576px here */
+    
+  }
+  @media screen and (min-width: 768px) {
+    .nav-links {
+      display: none; 
     }
-}
+    
+  } */
+   /* General styles */
+header {
+    width: 100%;
+    background: #333;
+    color: white;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .burger {
+      display: block;
+    }
+  }
+  

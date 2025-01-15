@@ -12,6 +12,27 @@
   </head>
 </head>
 <header>
+  <nav>
+    <div class="logo">
+      <img src="bayc-logo-z (1).jpg" alt="Logo" width="300px">
+    </div>
+    <div class="conn">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- <header>
 <nav>
   <div class="logo">
     <img src="bayc-logo-z (1).jpg" alt="" width="300px">
@@ -31,7 +52,7 @@
       </div>
   </div>   
 </nav>
-</header>
+</header> -->
 <body>
   
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -67,6 +88,7 @@
   
       <div class="container">
         <div class="row row-gap-3">
+          <!-- <div class="col-md-4 col-xl-3 col-sm-6 col-xxl-2"> -->
         <div class="col-md-2 col-xl-2 col-sm-4 col-xxl-2">
             <div class="card">
             <img class="card-img-top" src="1d6ec4968b3ca62f0651ce92d46a67db.jpg_200x200q80.jpg_.webp" alt="Card image cap">
@@ -110,7 +132,7 @@
               </div>
               </div>
             </div>
-
+            
             <div class="col-md-2 col-xl-2 col-sm-4 col-xxl-2">
               <div class="card">
               <img class="card-img-top" src="43a2f1df2be26e6a4342a0ebd3652ead.jpg_200x200q80.jpg_.webp" alt="Card image cap">
@@ -272,6 +294,16 @@
       document.querySelectorAll('.btn').forEach(button => {
         button.addEventListener('click', changePage);
       });
+      document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.querySelector(".burger");
+  const navLinks = document.querySelector(".nav-links");
+
+  burger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    burger.classList.toggle("toggle");
+  });
+});
+
     </script>
 </body>
 </html>
