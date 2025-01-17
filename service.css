@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0 0;
+} */
+
+/* nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+} */
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+main section {
+    background-color: white;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    color: #007BFF;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+main p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+/* Navigation Button Styles */
+nav ul ,header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0 0;
+}
+
+nav ul li, header ul li {
+    margin: 0 10px;
+}
+
+nav ul li a, header ul li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    background-color: #007BFF;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover , header ul li a:hover {
+    background-color: #97ff52;
+    transform: scale(1.05);
+    color: darkorchid;
+}
