@@ -1,12 +1,9 @@
-/* .carousel-inner{
-    width: 1000px ;
-    height: 500px ;    
-} */
+
 #myCarousel{
-    width: 80% ;
-    height: 500px ;
-    margin: 0 auto ;
+  width: 80%;
+  height: 500px;
 }
+
 .carousal-item{
     width: 100% ;
     height: 500px ;
@@ -63,7 +60,7 @@
     justify-content: space-between ;
     width: 100% ;
     margin: 0 auto ;
-    background-color: rgb(49, 49, 47);
+    background-color: white;
  }
  ul{
     display: flex ;
@@ -75,9 +72,9 @@
     padding-top: 20px;
     padding-right: 20px;
  }
-.logo{
-    /* background-color: blue; */
-}
+/* .logo{
+    background-color: blue;
+} */
 .par{
     background-color: greenyellow;
     font-family: sans-serif;
@@ -93,6 +90,7 @@
 .nav-links {
     list-style-type: none; 
     padding: 45px;
+    padding-top: 60px;
     margin: 0;
     display: flex; 
     gap: 10px; 
@@ -106,13 +104,13 @@
  
   .nav-links a {
     text-decoration: none; 
-    padding: 10px 20px; 
+    padding: 10px 30px; 
     border: 2px solid #007bff; 
     border-radius: 5px; 
     background-color: #007bff; 
     color: white; 
     font-weight: bold; 
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: 0.3s ease, color 0.3s ease; 
   }
   
   
@@ -202,4 +200,36 @@
         display: flex ;
         justify-content: space-evenly ;
         flex-wrap: wrap ;}  
-  
+  /* .carouselExampleAutoplaying{
+    width: 100% ;
+    height: 500px ;
+    margin: 0 auto ;
+    display: flex ;
+    justify-content: space-between ;
+    flex-wrap: block ;
+  } */
+   .card-text1{
+    font-size: 12px ;
+    font-family: sans-serif ;
+    color: brown;
+    padding-bottom: 3px;
+    padding-right: 10px;
+    margin: 0 auto ;
+    display: flex ;
+    justify-content: space-evenly ;
+    flex-wrap: wrap ;
+   }
+   .btn btn-secondary{
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  padding-left: 20px;
+  text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   }
+    .btn btn-secondary1:hover{
+      background-color: #0056b3;
+    }
