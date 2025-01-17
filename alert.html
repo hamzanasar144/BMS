@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Alert</title>
+    <style>
+        /* Overlay */
+        .alert-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.3s ease;
+        }
+
+        .alert-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Alert Box */
+        .alert-box {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .alert-box h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .alert-box p {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .alert-box button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .alert-box button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showAlert()">Place Order</button>
+
+    <!-- Custom Alert -->
+    <div class="alert-overlay" id="customAlert">
+        <div class="alert-box">
+            <h2>Order Placed!</h2>
+            <p>Your order has been successfully placed.</p>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function showAlert() {
+            const alert = document.getElementById('customAlert');
+            alert.classList.add('active');
+        }
+
+        function closeAlert() {
+            const alert = document.getElementById('customAlert');
+            alert.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

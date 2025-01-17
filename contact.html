@@ -58,6 +58,67 @@
             background: #555;
         }
     </style>
+                <style>
+                    /* Overlay */
+                    .alert-overlay {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 1000;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: visibility 0s, opacity 0.3s ease;
+                    }
+            
+                    .alert-overlay.active {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+            
+                    /* Alert Box */
+                    .alert-box {
+                        background-color: white;
+                        padding: 20px 30px;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                        text-align: center;
+                        max-width: 300px;
+                        width: 100%;
+                    }
+            
+                    .alert-box h2 {
+                        margin: 0;
+                        font-size: 1.5rem;
+                        color: #333;
+                    }
+            
+                    .alert-box p {
+                        margin: 10px 0;
+                        font-size: 1rem;
+                        color: #555;
+                    }
+            
+                    .alert-box button {
+                        background-color: #007BFF;
+                        color: white;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        margin-top: 10px;
+                    }
+            
+                    .alert-box button:hover {
+                        background-color: #0056b3;
+                    }
+                </style>
 </head>
 <body>
     <div class="container">
@@ -65,30 +126,40 @@
         <!-- <form action="#" method="post"> -->
         <div class="form">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required placeholder="enter your name">
+            <input type="text" id="name" name="name" required placeholder="enter your name" required="required">
             
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="enter your email">
+            <input type="email" id="email" name="email" required placeholder="enter your email" required="required">
 
             <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required="required">
             
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required placeholder="enter your message"></textarea>
+            <textarea id="message" name="message" rows="5" required placeholder="enter your message" required="required"></textarea>
             
-            <button type="submit" onclick="submit()">Submit</button>
+            <button type="submit" onclick="showAlert()">Submit</button>
         </div>
-        <!-- </form> -->
-    </div>
-    <script>
-        function submit(){
-
-    
-         alert("Our Team will contact you soon as possible");
-         console.log(res)
-    
-
-}
-    </script>
+        <body> 
+            <div class="alert-overlay" id="customAlert">
+                <div class="alert-box">
+                    <h2>Request Sent!</h2>
+                    <p>Our Team will Contact You soon as possible</p>
+                    <button onclick="closeAlert()">OK</button>
+                </div>
+            </div>
+        
+            <script>
+                function showAlert() {
+                    const alert = document.getElementById('customAlert');
+                    alert.classList.add('active');
+                }
+        
+                function closeAlert() {
+                    const alert = document.getElementById('customAlert');
+                    alert.classList.remove('active');
+                }
+            </script>
+        </body>
+        </html>
 </body>
 </html>
