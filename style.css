@@ -1,4 +1,7 @@
-
+.container{
+  display: flex;
+  
+}
 #myCarousel{
   width: 80%;
   height: 500px;
@@ -73,9 +76,10 @@
     padding-right: 20px;
     padding-bottom: 20px
  }
-/* .logo{
+.logo{
     background-color: blue;
-} */
+    padding-top: 20px;
+}
 .par{
     background-color: greenyellow;
     font-family: sans-serif;
@@ -108,17 +112,17 @@
     padding: 10px 30px; 
     border: 2px solid #007bff; 
     border-radius: 5px; 
-    background-color: #007bff; 
+    background-color: #ff8800; 
     color: white; 
     font-weight: bold; 
     transition: 0.3s ease, color 0.3s ease; 
   }
   
   
-  /* .nav-links a:hover {
-    background-color: white; 
-    color: #007bff; 
-  } */
+  .nav-links a:hover {
+    background-color: orangered; 
+    color: #ffcf90; 
+  }
   header {
     width: 100%;
     background: #333;
