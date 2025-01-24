@@ -60,7 +60,7 @@
     justify-content: space-between ;
     width: 100% ;
     margin: 0 auto ;
-    background-color: white;
+    background-color: orange ;
  }
  ul{
     display: flex ;
@@ -69,8 +69,9 @@
     margin: 0 auto ;
     column-gap: 20px ;
     list-style: none ;
-    padding-top: 20px;
+    padding-top: 0px;
     padding-right: 20px;
+    padding-bottom: 20px
  }
 /* .logo{
     background-color: blue;
@@ -114,10 +115,10 @@
   }
   
   
-  .nav-links a:hover {
+  /* .nav-links a:hover {
     background-color: white; 
     color: #007bff; 
-  }
+  } */
   header {
     width: 100%;
     background: #333;
