@@ -238,3 +238,26 @@
     .btn btn-secondary1:hover{
       background-color: #0056b3;
     }
+    .footer-fourth{
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    .lzd-follow-us-icon-list{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      justify-content: space-between;
+    }
+    section{
+      background-color: white;
+      margin: 1rem auto;
+      padding: 1.5rem;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
